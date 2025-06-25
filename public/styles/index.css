@@ -1,0 +1,178 @@
+:root {
+    --primary-color: #4a6fa5;
+    --success-color: #4CAF50;
+    --error-color: #f44336;
+    --transition: all 0.3s ease;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+    background-color: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    background-color: white;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: var(--transition);
+}
+
+h1 {
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+.input-container {
+    position: relative;
+    margin: 25px 0;
+}
+
+input {
+    padding: 15px;
+    width: 100%;
+    font-size: 16px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    transition: var(--transition);
+}
+
+input:focus {
+    border-color: var(--primary-color);
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(74, 111, 165, 0.2);
+}
+
+.card-icons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 20px 0;
+    flex-wrap: wrap;
+}
+
+.card-icon {
+    width: 60px;
+    height: 40px;
+    object-fit: contain;
+    opacity: 0.3;
+    transition: var(--transition);
+}
+
+.card-icon.active {
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+button {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: var(--transition);
+    font-weight: bold;
+    width: 100%;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #3a5a8f;
+    transform: translateY(-2px);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+#resultado {
+    margin-top: 25px;
+    font-size: 18px;
+    min-height: 60px;
+    padding: 15px;
+    border-radius: 8px;
+    background-color: #f5f5f5;
+    transition: var(--transition);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.success {
+    background-color: rgba(76, 175, 80, 0.1) !important;
+    color: var(--success-color);
+}
+
+.error {
+    background-color: rgba(244, 67, 54, 0.1) !important;
+    color: var(--error-color);
+}
+
+.card-details {
+    margin-top: 15px;
+    font-size: 14px;
+    color: #666;
+}
+
+.card-type {
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 5px;
+    color: var(--primary-color);
+}
+
+.validation-result {
+    display: inline-block;
+    padding: 3px 8px;
+    border-radius: 4px;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+.valid {
+    background-color: rgba(76, 175, 80, 0.2);
+    color: var(--success-color);
+}
+
+.invalid {
+    background-color: rgba(244, 67, 54, 0.2);
+    color: var(--error-color);
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 20px;
+    }
+    
+    input {
+        padding: 12px;
+    }
+    
+    .card-icon {
+        width: 50px;
+        height: 35px;
+    }
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in {
+    animation: fadeIn 0.5s ease-out;
+}

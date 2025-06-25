@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Identificador de Bandeira de Cartão</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Identificador de Bandeira de Cartão</h1>
+        <p>Digite o número do cartão para identificar a bandeira e validar:</p>
+        
+        <div class="input-container">
+            <input type="text" id="numeroCartao" placeholder="1234 5678 9012 3456" maxlength="19" autocomplete="off">
+        </div>
+        
+        <div class="card-icons">
+            <img id="visa-icon" class="card-icon" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Visa_Inc._logo.svg/2560px-Visa_Inc._logo.svg.png" alt="Visa" title="Visa">
+            <img id="mastercard-icon" class="card-icon" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Mastercard-logo.svg/1280px-Mastercard-logo.svg.png" alt="MasterCard" title="MasterCard">
+            <img id="amex-icon" class="card-icon" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/American_Express_logo.svg/1200px-American_Express_logo.svg.png" alt="American Express" title="American Express">
+            <img id="discover-icon" class="card-icon" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Discover_Card_logo.svg/1200px-Discover_Card_logo.svg.png" alt="Discover" title="Discover">
+            <img id="diners-icon" class="card-icon" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Diners_Club_International_logo.svg/1200px-Diners_Club_International_logo.svg.png" alt="Diners Club" title="Diners Club">
+            <img id="jcb-icon" class="card-icon" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/JCB_logo.svg/1200px-JCB_logo.svg.png" alt="JCB" title="JCB">
+            <img id="unionpay-icon" class="card-icon" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/UnionPay_logo.svg/1200px-UnionPay_logo.svg.png" alt="UnionPay" title="UnionPay">
+            <img id="maestro-icon" class="card-icon" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Maestro_2016.svg/1200px-Maestro_2016.svg.png" alt="Maestro" title="Maestro">
+        </div>
+        
+        <button id="validarBtn">Identificar e Validar</button>
+        
+        <div id="resultado">
+            <div>Digite um número de cartão para verificação</div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
